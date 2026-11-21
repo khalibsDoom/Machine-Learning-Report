@@ -1,32 +1,32 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+# Comparing Classification Algorithms: Spam and Fake News Detection
 
-\f0\fs24 \cf0 Northeastern University \
-Prince Nwaozuru\
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
-\cf0 \
-END TO END CODE FOR THE ASSIGNMENT 2 CLASSIFICATION MODULES\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-This Assignment module has 2 data sets being utilized which are both classification problems. The spam classification problems and fake news were all algorithms were being utilized on the first classification data set while 2 algorithms were used on the second dataset.\
-\
-\
-DOWNLOAD  the Spam Collection Data set from;\
-\
-https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset/discussion/346758?resource=download\
-(216KB)\
-\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\
-DOWNLOAD the Fake news Dataset from :\
-https://drive.google.com/file/d/1er9NJTLUA3qnRuyhfzuN0XUsoIC4a-_q/view\
-(29MB)\
-\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\
-DOWNLOAD and run  the Assignment 2.ipynb file to get results. \
-}
+A machine learning study comparing how different classification algorithms perform on two text classification problems: SMS spam detection and fake news detection.
+
+## What it does
+
+- **Text preprocessing:** lowercasing, tokenization, stop-word removal and Porter stemming with NLTK; word clouds and frequency analysis to explore each class
+- **Feature extraction:** bag-of-words (`CountVectorizer`) and TF-IDF (`TfidfVectorizer`)
+- **Model comparison:** trains and scores 10+ classifiers side by side on accuracy and precision: Gaussian, Multinomial and Bernoulli Naive Bayes, Logistic Regression, SVC, K-Nearest Neighbours, Decision Tree, Random Forest, AdaBoost, Bagging, Extra Trees, Gradient Boosting, and a Passive Aggressive classifier for fake news
+- **Evaluation:** confusion matrices, accuracy and precision, and a written analysis of why each algorithm behaves differently on each dataset
+
+The full write-up, with results and conclusions, is in [`docs/analysis-report.pdf`](docs/analysis-report.pdf).
+
+## Datasets
+
+| Dataset | Source |
+|---|---|
+| SMS Spam Collection (`spam.csv`) | [Kaggle / UCI](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) |
+| Fake news (`news.csv`) | DataFlair fake news dataset |
+
+Both files are included in this repo.
+
+## Run it
+
+```bash
+pip install pandas numpy scikit-learn nltk matplotlib seaborn wordcloud
+python "Assignment 2.py"
+```
+
+## Tech stack
+
+Python · scikit-learn · NLTK · pandas · NumPy · Matplotlib · Seaborn · WordCloud

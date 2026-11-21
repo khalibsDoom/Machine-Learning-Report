@@ -16,7 +16,7 @@ import pandas as pd
 
 #putting it into a dataframe
 # df = pd.DataFrame(pd.read_csv('spam.csv'))
-df = pd.read_csv("/Users/princecaleb/Downloads/spam.csv", encoding = "ISO-8859-1", engine = "python")
+df = pd.read_csv("spam.csv", encoding = "ISO-8859-1", engine = "python")
 
 
 # In[3]:
@@ -847,7 +847,7 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 # In[16]:
 
 
-data=pd.DataFrame(pd.read_csv('/Users/princecaleb/Downloads/Documents/news.csv'))
+data=pd.DataFrame(pd.read_csv('news.csv'))
 
 
 # In[17]:
